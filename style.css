@@ -31,7 +31,7 @@ h1 {
 .flashcard {
     background-color: transparent;
     width: 250px;
-    height: 220px; /* Altura ideal para caber texto + imagens */
+    height: 220px;
     perspective: 1000px; /* Cria o efeito 3D */
 }
 
