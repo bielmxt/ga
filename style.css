@@ -31,7 +31,7 @@ h1 {
 .flashcard {
     background-color: transparent;
     width: 250px;
-    height: 180px;
+    height: 220px; /* Altura ideal para caber texto + imagens */
     perspective: 1000px; /* Cria o efeito 3D */
 }
 
@@ -77,6 +77,12 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 1px;
     opacity: 0.8;
+    margin: 0 0 5px 0;
+}
+
+.frente p, .verso p {
+    margin: 5px 0;
+    font-size: 0.95rem;
 }
 
 .verso {
@@ -84,11 +90,13 @@ h1 {
     color: white;
     transform: rotateY(180deg); /* Começa invertido */
 }
-/* Estilo para ajustar a sua imagem dentro do Flashcard */
+
+/* Estilo para ajustar as imagens dentro do Flashcard */
 .imagem-card {
-    width: 60px;          /* Ajusta a largura */
-    height: 150px;         /* Ajusta a altura */
+    width: auto;
+    max-width: 80px;      /* Controla a largura máxima */
+    height: 60px;         /* Mantém a imagem pequena e proporcional */
     object-fit: contain;  /* Impede que a foto fique esticada */
-    margin-bottom: 10px;  /* Cria um espaço entre a foto e o texto */
+    margin: 5px 0;        /* Cria um espaço equilibrado entre os elementos */
     border-radius: 5px;   /* Deixa as pontas da imagem levemente arredondadas */
 }
